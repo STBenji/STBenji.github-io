@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.main-container {
+  background: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-dark {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dark {
+  width: 25px;
+  height: 25px;
+  background: #000;
+  border-radius: 50%;
+  box-shadow: -5px -5px 6px #dddddd, 3px 4px 5px #6161617c;
+  transition: 0.4s ease-in;
+}
+
+.dark-active {
+  background: #fff;
+}
+
+.dark-active .main-container {
+  background: #222;
+}
+
+.dark-active .clock {
+  background: #222;
+  box-shadow: -25px -25px 26px #292929, 25px 25px 26px #000000;
+  text-shadow: -2px -3px 5px rgba(0, 0, 0, 0.6), 8px 8px 12px rgb(9, 9, 9);
+  color: #fff;
+}
+
+.dark-active .dark {
+  box-shadow: -5px -5px 6px #252525, 3px 4px 5px #1f1f1f7c;
+}
+
+.dark-active footer {
+
+  color: #fff;
+
+}
+
+.clock {
+  width: 410px;
+  padding: 30px 30px;
+  transition: 0.4s ease;
+  font-size: 5em;
+  text-align: center;
+  border-radius: 40px;
+  background: #f2f2f2;
+  box-shadow: -25px -25px 26px #e3e3e3, 25px 25px 26px #ffffff;
+  color: #000;
+  text-shadow: -2px -3px 5px rgba(0, 0, 0, 0.6), 8px 8px 12px #fff;
+  font-weight: 800;
+  margin: 1em;
+}
+
+.jornada {
+
+  font-size: 2rem;
+  width: 100%;
+  letter-spacing: 5px;
+  text-align: center;
+
+}
+.date {
+
+  height: 50px;
+  position: relative;
+  bottom: .5em;
+
+}
+
+#day,
+#month,
+#year {
+  font-size: 0.5em;
+  margin: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 4%;
+  left: 2em;
+  transition: 0.2s ease-in;
+}
+
+@media only screen and (max-width: 426px) {
+  .clock {
+    width: 400px;
+    font-size: 3em;
+  }
+
+  .date {
+
+    height: 30px;
+
+  }
+}
